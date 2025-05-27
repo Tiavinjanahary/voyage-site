@@ -75,7 +75,7 @@
             }
         });
 
-//----------------------------------------------------------------
+//--------------------------------------------------------------
 
 const destinationCards = document.querySelectorAll('.destination-card');
 const body = document.querySelector('body');
