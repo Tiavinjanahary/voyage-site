@@ -101,10 +101,10 @@ const modalData = {
         images: ["Paris1..jpg", "Paris2.jpg", "Paris3.jpg"],
         description: "Découvrez Paris, la ville lumière, avec ses monuments emblématiques comme la Tour Eiffel, le Louvre et ses cafés romantiques."
     },
-    tokyo: {
-        title: "Tokyo, Japon",
+    toliara: {
+        title: "Toliara, Madagascar",
         // images: ["images/tokyo2.jpg"],
-        description: "Tokyo, entre tradition et ultra-modernité. Explorez ses temples, ses gratte-ciels, et sa gastronomie inégalée."
+        description: "Toliara, entre tradition et ultra-modernité. Explorez ses temples, ses gratte-ciels, et sa gastronomie inégalée."
     },
     bali: {
         title: "Bali, Indonésie",
