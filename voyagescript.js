@@ -16,31 +16,46 @@
             });
         });
 
-        // Slider témoignages
-        const testimonials = document.querySelectorAll('.testimonial');
-        const dots = document.querySelectorAll('.dot');
-        let currentSlide = 0;
+// Témoignages
+const testimonials = document.querySelectorAll('.testimonial');
+const dotsContainer = document.querySelector('.dots-container'); // Ajoute une div dédiée dans ton HTML
+let currentSlide = 0;
 
-        function showSlide(n) {
-            testimonials.forEach(testimonial => testimonial.style.display = 'none');
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            currentSlide = (n + testimonials.length) % testimonials.length;
-            
-            testimonials[currentSlide].style.display = 'block';
-            dots[currentSlide].classList.add('active');
-        }
+// Supprime les anciens dots s’il y en a
+dotsContainer.innerHTML = '';
 
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-            });
-        });
+// Crée les dots dynamiquement
+testimonials.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+        showSlide(index);
+    });
+    dotsContainer.appendChild(dot);
+});
 
-        // Auto-slide
-        setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 5000);
+// Re-récupère les dots créés
+const dots = dotsContainer.querySelectorAll('.dot');
+
+function showSlide(n) {
+    testimonials.forEach(testimonial => testimonial.style.display = 'none');
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    currentSlide = (n + testimonials.length) % testimonials.length;
+
+    testimonials[currentSlide].style.display = 'block';
+    dots[currentSlide].classList.add('active');
+}
+
+// Auto-slide
+setInterval(() => {
+    showSlide(currentSlide + 1);
+}, 5000);
+
+// Affiche le premier slide
+showSlide(0);
+
 
         // Formulaire de contact
         const contactForm = document.getElementById('contactForm');
@@ -83,13 +98,18 @@ const body = document.querySelector('body');
 const modalData = {
     paris: {
         title: "Paris, France",
-        images: ["paris.avif", "paris.avif", "paris.avif", "paris.avif"],
+        images: ["paris.avif", "paris.avif", "paris.avif"],
         description: "Découvrez Paris, la ville lumière, avec ses monuments emblématiques comme la Tour Eiffel, le Louvre et ses cafés romantiques."
     },
     tokyo: {
         title: "Tokyo, Japon",
-        images: ["images/tokyo2.jpg"],
+        // images: ["images/tokyo2.jpg"],
         description: "Tokyo, entre tradition et ultra-modernité. Explorez ses temples, ses gratte-ciels, et sa gastronomie inégalée."
+    },
+    bali: {
+        title: "Bali, Indonésie",
+        // images: ["images/tokyo2.jpg"],
+        description: "Bali, endroit paradisiaque."
     },
     // Ajoute plus ici si tu as d'autres destinations...
 };
@@ -104,16 +124,25 @@ destinationCards.forEach(card => {
         modal.classList.add('modal');
         modal.id = `modal-${id}`;
 
-        let imagesHTML = data.images.map(src => `<img src="${src}" alt="${data.title}">`).join('');
+        // Description (optionnelle)
+        const descriptionHTML = data.description ? `<p>${data.description}</p>` : '';
+
+        // Images avec classe "image-gallery"
+        const imagesHTML = (Array.isArray(data.images) && data.images.length > 0)
+        ? `<div class="image-gallery">
+                ${data.images.map(src => `<img src="${src}" alt="${data.title}">`).join('')}
+            </div>`
+        : '';
 
         modal.innerHTML = `
             <div class="modal-content">
                 <span class="close-btn">&times;</span>
                 <h2>${data.title}</h2>
-                <p>${data.description}</p>
+                ${descriptionHTML}
                 ${imagesHTML}
             </div>
         `;
+
 
         body.appendChild(modal);
 
@@ -124,11 +153,26 @@ destinationCards.forEach(card => {
     }
 });
 
+
 // Gérer la fermeture
 document.addEventListener('click', (e) => {
+    // Ferme la modale si on clique sur la "close-btn"
     if (e.target.classList.contains('close-btn')) {
         e.target.closest('.modal').style.display = 'none';
-    } else if (e.target.classList.contains('modal')) {
+    }
+    // Ferme la modale si on clique en dehors de celle-ci
+    else if (e.target.classList.contains('modal')) {
         e.target.style.display = 'none';
+    }
+});
+
+// Ferme toutes les modales si l'utilisateur appuie sur la touche Échap
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const openModals = document.querySelectorAll('.modal');
+        openModals.forEach(modal => {
+            if (modal.style.display === 'block') {
+            modal.style.display = 'none'; }
+        });
     }
 });
