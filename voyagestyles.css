@@ -51,7 +51,14 @@
         .logo:hover {
         box-shadow: 0 0 30px #fc63e5, 0 0 30px #f3ef03;
         transform: scale(1.05);
-}
+        }
+
+        .logo-img {
+        height: 50px;  /* ou ajuste selon ton besoin */
+        width: 50px;
+        margin-right: 10px;
+        }
+
 
         /* Navigation */
         nav ul {
