@@ -98,7 +98,7 @@ const body = document.querySelector('body');
 const modalData = {
     paris: {
         title: "Paris, France",
-        images: ["Paris1.jpg", "Paris2.jpg", "Paris2.jpg"],
+        images: ["Paris1..jpg", "Paris2.jpg", "Paris3.jpg"],
         description: "Découvrez Paris, la ville lumière, avec ses monuments emblématiques comme la Tour Eiffel, le Louvre et ses cafés romantiques."
     },
     tokyo: {
