@@ -57,26 +57,26 @@ setInterval(() => {
 showSlide(0);
 
 
-        // Formulaire de contact
-        const contactForm = document.getElementById('contactForm');
+        // // Formulaire de contact
+        // const contactForm = document.getElementById('contactForm');
         
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+        // contactForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
             
-            // Récupérer les valeurs du formulaire
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+        //     // Récupérer les valeurs du formulaire
+        //     const name = document.getElementById('name').value;
+        //     const email = document.getElementById('email').value;
+        //     const message = document.getElementById('message').value;
             
-            // Ici, vous pourriez ajouter du code pour envoyer les données à un serveur
-            console.log('Formulaire soumis:', { name, email, message });
+        //     // Ici, vous pourriez ajouter du code pour envoyer les données à un serveur
+        //     console.log('Formulaire soumis:', { name, email, message });
             
-            // Afficher un message de confirmation
-            alert('Merci pour votre message, ' + name + ' ! Nous vous contacterons bientôt.');
+        //     // Afficher un message de confirmation
+        //     alert('Merci pour votre message, ' + name + ' ! Nous vous contacterons bientôt.');
             
-            // Réinitialiser le formulaire
-            contactForm.reset();
-        });
+        //     // Réinitialiser le formulaire
+        //     contactForm.reset();
+        // });
 
         // Animation au défilement
         window.addEventListener('scroll', () => {
@@ -175,4 +175,15 @@ document.addEventListener('keydown', (e) => {
             modal.style.display = 'none'; }
         });
     }
+});
+
+// Boutons "Voir la destination" du calendrier
+document.querySelectorAll('.open-destination').forEach(button => {
+    button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target-id');
+        const destinationCard = document.querySelector(`.destination-card[data-id="${targetId}"]`);
+        if (destinationCard) {
+            destinationCard.click(); // Simule un clic sur la carte pour ouvrir la modale
+        }
+    });
 });
