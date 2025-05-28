@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="LogoNTV.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="LogoNTV.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="LogoNTV.png">
     <title>Nitia Voyages et Horizon - Découvrez le monde</title>
 <link rel="stylesheet" href="voyagestyles.css">
 </head>
 <body>
     <header>
         <div class="container header-container">
-            <div class="logo">Nitia&nbsp;<span>Voyage et Horizon</span></div>
+            <div class="logo">
+                <img src="LogoNTV.png" alt="Logo Nitia Voyages" class="logo-img">
+                <span>&nbsp;<span>Voyage et Horizon</span></div>
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#calendar">Calendrier</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#temoignages">Témoignages</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -102,7 +106,53 @@
             </div>
         </div>
     </section>
+<!-- ..................................................................................... -->
+    <section class="section" id="calendar">
+    <div class="container">
+        <div class="section-title">
+            <h2>Calendrier des départs</h2>
+        </div>
+        <div class="calendar-cards">
+            <div class="calendar-card">
+                <h3 class="destination-title">Nosy Be, Madagascar</h3>
+                <p class="calendar-subtitle">Date de départ – Date de retour</p>
+                <ul class="calendar-dates">
+                    <li>12 juin 2025 – 18 juin 2025</li>
+                    <li>05 juillet 2025 – 11 juillet 2025</li>
+                    <li>20 août 2025 – 26 août 2025</li>
+                </ul>
+                <p class="calendar-price">À partir de 850.000 Ariary</p>
+                <a href="#destinations" class="calendar-btn">Voir la destination</a>
+            </div>
 
+            <div class="calendar-card">
+                <h3 class="destination-title">Sainte Marie, Madagascar</h3>
+                <p class="calendar-subtitle">Date de départ – Date de retour</p>
+                <ul class="calendar-dates">
+                    <li>12 juin 2025 – 18 juin 2025</li>
+                    <li>05 juillet 2025 – 11 juillet 2025</li>
+                    <li>20 août 2025 – 26 août 2025</li>
+                </ul>
+                <p class="calendar-price">À partir de 950.000 Ariary</p>
+                <a href="#destinations" class="calendar-btn">Voir la destination</a>
+            </div>
+
+            <div class="calendar-card">
+                <h3 class="destination-title">Toliara, Madagascar</h3>
+                <p class="calendar-subtitle">Date de départ – Date de retour</p>
+                <ul class="calendar-dates">
+                    <li>10 septembre 2025 – 20 septembre 2025</li>
+                    <li>15 octobre 2025 – 25 octobre 2025</li>
+                </ul>
+                <p class="calendar-price">À partir de 1.120.000 Ariary</p>
+                <a href="#destinations" class="calendar-btn">Voir la destination</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ................................................................................................... -->
     <section class="section services" id="services">
         <div class="container">
             <div class="section-title">
@@ -141,23 +191,23 @@
             <div class="testimonial-slider">
                 <div class="testimonial active">
                     <p class="testimonial-text">"Notre voyage à Bali organisé par Voyages Horizon était tout simplement parfait. Tout était bien planifié et nous avons pu profiter pleinement de chaque moment sans aucun stress."</p>
-                    <p class="testimonial-author">- Happy.</p>
+                    <!-- <p class="testimonial-author">- Happy.</p> -->
                 </div>
                 <div class="testimonial">
                     <p class="testimonial-text">"Service client exceptionnel ! Ils ont répondu à toutes nos questions et ont personnalisé notre itinéraire selon nos envies. Nous recommandons vivement !"</p>
-                    <p class="testimonial-author">- Content.</p>
+                    <!-- <p class="testimonial-author">- Content.</p> -->
                 </div>
                 <div class="testimonial">
                     <p class="testimonial-text">"Organisation au top, groupe sympathique et encadrement professionnel. De superbes découvertes chaque jour, le tout sans stress. Une expérience à refaire !"</p>
-                    <p class="testimonial-author">- Ravie.</p>
+                    <!-- <p class="testimonial-author">- Ravie.</p> -->
                 </div>
                 <div class="testimonial">
                     <p class="testimonial-text">"Notre lune de miel au Japon a dépassé toutes nos attentes. Merci à Nitia Voyages et Horizon pour cette expérience magique et ces souvenirs inoubliables."</p>
-                    <p class="testimonial-author">- Heureux.</p>
+                    <!-- <p class="testimonial-author">- Heureux.</p> -->
                 </div>
                 <div class="testimonial">
                     <p class="testimonial-text">"Tout s’est déroulé comme prévu : timing respecté, belles visites, et une équipe toujours disponible. Nous repartons avec de merveilleux souvenirs !"</p>
-                    <p class="testimonial-author">- Très Heureux.</p>
+                    <!-- <p class="testimonial-author">- Très Heureux.</p> -->
                 </div>
                 <div class="dots-container"></div>
                 <!-- <div class="slider-dots">
@@ -169,7 +219,7 @@
         </div>
     </section>
 
-    <section class="section" id="contact">
+    <!-- <section class="section" id="contact">
         <div class="container">
             <div class="section-title">
                 <h2>Contactez-nous</h2>
@@ -198,7 +248,7 @@
                             <option value="bali">Bali, Indonésie</option>
                             <option value="nosy-be">Nosy Be, Madagascar</option>
                             <option value="sainte-marie">Sainte Marie, Madagascar</option>
-                            <!-- <option value="autre">Autre</option> -->
+                             <option value="autre">Autre</option> 
                         </select>
                     </div>
                     <div class="form-group">
@@ -209,7 +259,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer>
         <div class="container">
@@ -223,19 +273,30 @@
                     <ul>
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#calendar">Calendrier</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#temoignages">Témoignages</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <ul>
                         <li>Antananarivo, Madagascar</li>
-                        <li>+261 34 01 803 09</li>
-                        <li>contact@nitiavoyages.com</li>
                     </ul>
+                <div class="social-links">
+                    <a aria-label="Whatsapp">
+                        <img src="Whatsapp.png" alt="Whatsapp logo" />
+                        <span>+261 34 01 803 09</span>
+                    </a>
                 </div>
+                <div class="social-links">
+                    <a aria-label="Mail">
+                        <img src="courrier.png" alt="Mail logo" />
+                        <span>contact@nitiavoyages.com</span>
+                    </a>
+                </div>
+                </div>
+                <section class="contact" id="contact">
                 <div class="footer-column">
                     <h3>Suivez-nous</h3>
                     <!-- <div class="social-card">
@@ -243,20 +304,20 @@
                         <div class="name">YouTube</div>
                     </div>   -->
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">
-                            <!-- <span>Facebook</span> -->
-                            <img src="facebook.png" alt="Facebook logo" />
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <img src="instagram.png" alt="Instagram logo" />
-                        </a>
-                        <a href="#" aria-label="Whatsapp">
-                            <img src="Whatsapp.png" alt="Whatsapp logo" />
-                        </a>
-                        <a href="#" aria-label="Mail">
-                            <img src="courrier.png" alt="Mail logo" />
-                        </a>
-                    </div>
+                    <a aria-label="Facebook">
+                        <img src="facebook.png" alt="Facebook logo" />
+                        <span>Nirindra Rakotondrahanta</span>
+                    </a>
+                </div>
+                                    <div class="social-links">
+                    <a aria-label="Instagram">
+                        <img src="instagram.png" alt="Instagram logo" />
+                        <span>Nirindra Rakotondrahanta</span>
+                    </a>
+                </div>
+                </section>
+   
+                    <!-- </div> -->
                 </div>
             </div>
             <div class="copyright">
