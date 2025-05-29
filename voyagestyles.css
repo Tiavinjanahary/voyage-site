@@ -167,7 +167,16 @@
 
         /* Destinations */
         .section {
-            padding: 5rem 0;
+            padding-top: 1cm;
+            padding-bottom: 1cm;
+        }
+
+        .section1 {
+        background: hsla(182, 100%, 50%, 0.137);
+        padding-top: 1cm;  
+        padding-bottom: 1cm;
+        margin-left: 2cm;
+        margin-right: 2cm;
         }
 
         .section-title {
