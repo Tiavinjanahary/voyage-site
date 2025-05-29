@@ -98,7 +98,7 @@ const body = document.querySelector('body');
 const modalData = {
     paris: {
         title: "Paris, France",
-        images: ["Paris1..jpg", "Paris2.jpg", "Paris3.jpg"],
+        images: ["paris.avif", "paris.avif", "paris.avif"],
         description: "Découvrez Paris, la ville lumière, avec ses monuments emblématiques comme la Tour Eiffel, le Louvre et ses cafés romantiques."
     },
     toliara: {
@@ -187,3 +187,21 @@ document.querySelectorAll('.open-destination').forEach(button => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("welcomeModal");
+    const closeBtn = document.getElementById("closeWelcomeBtn");
+    const closeModal = () => {
+        modal.classList.add("hide");
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 600); // Durée = celle de l'animation CSS
+    };
+    closeBtn.addEventListener("click", closeModal);
+    setTimeout(closeModal, 4000);
+});
+
+  const css = document.createElement('link');
+  css.rel = 'stylesheet';
+  css.href = 'voyagestyles.css?v=' + new Date().getTime(); // nouvelle version à chaque visite
+  document.head.appendChild(css);
