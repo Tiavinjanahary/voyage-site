@@ -98,17 +98,17 @@ const body = document.querySelector('body');
 const modalData = {
     paris: {
         title: "Paris, France",
-        images: ["paris.avif", "paris.avif", "paris.avif"],
+        images: ["Paris1..jpg", "Paris2.jpg", "Paris3.jpg"],
         description: "Découvrez Paris, la ville lumière, avec ses monuments emblématiques comme la Tour Eiffel, le Louvre et ses cafés romantiques."
     },
     toliara: {
         title: "Toliara, Madagascar",
-        // images: ["images/tokyo2.jpg"],
-        description: "Toliara, entre tradition et ultra-modernité. Explorez ses temples, ses gratte-ciels, et sa gastronomie inégalée."
+        // images: ["Toliara.jpg"],
+        description: "Toliara, entre tradition et paysages magnifiques. Explorez ses temples, ses gratte-ciels, et sa gastronomie inégalée."
     },
     bali: {
         title: "Bali, Indonésie",
-        // images: ["images/tokyo2.jpg"],
+        // images: ["images/Bali.jpg"],
         description: "Bali, endroit paradisiaque."
     },
     // Ajoute plus ici si tu as d'autres destinations...
