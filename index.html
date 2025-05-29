@@ -6,14 +6,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="LogoNTV.png">
     <link rel="icon" type="image/png" sizes="16x16" href="LogoNTV.png">
     <title>Nitia Voyages</title>
-<link rel="stylesheet" href="voyagestyles.css">
+<!-- <link rel="stylesheet" href="voyagestyles.css"> -->
 </head>
 <body>
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="LogoNTV.png" alt="Logo Nitia Voyages" class="logo-img">
-                Nitia&nbsp;<span>Voyage et Horizon</span></div>
+            <a href="#">
+            <img src="LogoNTV.png" alt="Logo Nitia Voyages" class="logo-img">
+            Nitia&nbsp;<span>Voyage et Horizon</span>
+            </a>
+            </div>
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul>
@@ -328,7 +331,15 @@
             </div>
         </div>
     </footer>
+<div id="welcomeModal" class="welcome-modal">
+  <div class="welcome-content">
+    <h2>Bienvenue sur Nitia Voyages !</h2>
+    <p>Préparez-vous à découvrir le monde 🌍</p>
+    <button id="closeWelcomeBtn">C'est parti !</button>
+  </div>
+</div>
 
-<script src="voyagescript.js"></script>
+<!-- <script src="voyagescript.js"></script> -->
+<script src="voyagescript.js?v=" + new Date().getTime()></script>
 </body>
 </html>
