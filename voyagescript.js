@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(closeModal, 4000);
 });
 
-  const css = document.createElement('link');
-  css.rel = 'stylesheet';
-  css.href = 'voyagestyles.css?v=' + new Date().getTime(); // nouvelle version à chaque visite
-  document.head.appendChild(css);
+ // const css = document.createElement('link');
+ // css.rel = 'stylesheet';
+ // css.href = 'voyagestyles.css?v=' + new Date().getTime(); // nouvelle version à chaque visite
+ // document.head.appendChild(css);
